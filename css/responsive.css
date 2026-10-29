@@ -1,0 +1,566 @@
+/* Bakerz Bite — site-wide responsive layer. Loaded last so every page shares the same fixes. */
+*,*::before,*::after{box-sizing:border-box}
+html{width:100%;max-width:100%;overflow-x:clip;scroll-padding-top:90px}
+body{width:100%;max-width:100%;overflow-x:clip}
+img,video,iframe,svg,canvas{max-width:100%}
+img{height:auto}
+button,input,select,textarea{max-width:100%;font:inherit}
+input,select,textarea{min-width:0}
+.container{width:min(1160px, calc(100% - 40px));}
+main,section,header,footer,nav,article,aside,.container{min-width:0}
+pre,code{white-space:pre-wrap;overflow-wrap:anywhere}
+.table-responsive,table{max-width:100%}
+button,.btn,a{touch-action:manipulation}
+/* Keep common content layouts from forcing a wider viewport. */
+.category-grid,.product-grid,.gallery-grid,.gallery-showcase,.gallery-mosaic,.feature-list,.info-grid,.footer-grid,.review-wall,.story-stat-grid,.about-stats,.menu-sections,.offer-grid,.offers-grid,.location-info-grid,.sitemap-grid,.stats-grid{min-width:0}
+.product-card,.category-card,.gallery-card,.review-card,.review-quote,.info-card,.feature,.offer-tile,.cart-list,.cart-summary,.cart-row,.form-panel{min-width:0;overflow-wrap:anywhere}
+.product-card img,.category-card img,.gallery-grid img,.gallery-showcase img,.gallery-mosaic img{max-width:100%;object-fit:cover}
+.field input,.field textarea,.field select,input,select,textarea{width:100%;}
+.field textarea{resize:vertical}
+.cart-drawer{width:min(440px,100vw);max-width:100vw}
+.cart-drawer-items{min-width:0;overflow-x:hidden}
+.cart-drawer-foot .btn{width:100%}
+.nav-inner{min-width:0}
+.nav-links{min-width:0}
+.nav-links a{overflow-wrap:anywhere}
+.topline .container,.footer-bottom{min-width:0}
+.footer-bottom{gap:10px;flex-wrap:wrap}
+.map-frame{display:block;max-width:100%;}
+@media(max-width:1100px){
+ .container{width:min(100% - 36px, 1000px)}
+ .split{gap:26px}
+ .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .product-grid,.category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .cart-layout{grid-template-columns:minmax(0,1.35fr) minmax(260px,.8fr)}
+ .nav-inner{gap:12px}
+ .nav-links{gap:10px}
+}
+@media(max-width:900px){
+ .container{width:calc(100% - 32px)}
+ .nav-inner{flex-wrap:wrap;gap:10px;padding:10px 0}
+ .brand{min-width:0;max-width:calc(100% - 150px)}
+ .brand-name{overflow-wrap:normal}
+ .menu-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+ .nav-links{order:5;display:none;flex:0 0 100%;width:100%;padding:8px 0;flex-direction:column;align-items:stretch;gap:0}
+ .nav-links.open{display:flex}
+ .nav-links a{display:block;padding:11px 8px;border-top:1px solid #ffffff20}
+ .nav-links a.nav-account-link{align-self:center;width:min(100%,260px);margin:12px auto 4px;padding:11px 18px;text-align:center;border:1px solid #c99a4e80;border-radius:9px;line-height:1.3;justify-content:center;}
+ body:not(.dark) .nav-links a.nav-account-link,
+ body.dark .nav-links a.nav-account-link{background:#e8d7bd;color:#24150f;border-color:#d4bc98;}
+ .nav-actions{margin-left:auto;flex-shrink:0}
+ .split,.form-layout{grid-template-columns:minmax(0,1fr)}
+ .split img{height:auto;max-height:420px}
+ .form-image{min-height:280px}
+ .cart-layout{grid-template-columns:minmax(0,1fr)}
+ .cart-summary{position:static}
+ .product-grid,.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .feature-list,.info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .section{padding:52px 0}
+ .page-hero{padding:38px 0}
+ .hero{min-height:400px}
+ .hero-content{max-width:100%;padding:48px 18px}
+ .hero h1{font-size:clamp(2.1rem,6vw,3.6rem)}
+ .offer-banner{flex-wrap:wrap}
+ .checkout-grid,.checkout-layout{grid-template-columns:minmax(0,1fr)!important}
+}
+@media(max-width:600px){
+ .container{width:calc(100% - 28px)}
+ .topline .container{align-items:flex-start;gap:4px 12px}
+ .topline{font-size:.74rem}
+ .brand{gap:7px;max-width:calc(100% - 125px)}
+ .brand-logo-img{width:40px;height:40px;flex-basis:40px}
+ .brand-name{font-size:1rem!important;line-height:1.1}
+ .brand-name small{font-size:.48rem!important;letter-spacing:1px!important}
+ .nav-inner{gap:7px}
+ .menu-toggle{padding:7px 8px;font-size:.76rem}
+ .nav-actions{gap:4px}
+ .theme-switch{transform:scale(.9);transform-origin:right center}
+ .nav-cart-icon{position:fixed;right:0;top:48%;width:42px;height:48px;border-radius:12px 0 0 12px;z-index:75}
+ .nav-actions .auth-nav{width:36px;min-width:36px;height:36px;padding:4px;justify-content:center}
+ .section{padding:40px 0}
+ .page-hero{padding:30px 0}
+ .page-hero h1,.section-heading h2,.section-head h2{font-size:clamp(1.7rem,7vw,2.35rem)}
+ .hero{min-height:360px}
+ .hero-content{padding:38px 14px}
+ .hero h1{font-size:clamp(2rem,9vw,2.8rem);line-height:1.12}
+ .hero p{font-size:.95rem;line-height:1.65}
+ .hero-content .btn,.hero .btn{margin:12px 4px 0;padding:10px 13px;font-size:.9rem}
+ .section-head{align-items:flex-start;flex-direction:column;gap:8px}
+ .product-grid,.category-grid,.gallery-grid,.gallery-showcase,.gallery-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .product-card img{height:clamp(125px,38vw,190px)}
+ .product-info{padding:11px}
+ .product-info h3{font-size:1rem;overflow-wrap:anywhere}
+ .product-info p{font-size:.8rem;min-height:0}
+ .product-bottom{align-items:center;flex-direction:row;justify-content:space-between;gap:8px}
+ .product-bottom .small-btn{width:36px;min-width:36px;height:34px;padding:0;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center}
+ .product-bottom .btn{width:100%;justify-content:center}
+ .as-item:nth-child(n+2){border-left:0;border-top:1px solid #e8c7a626}
+ .category-card,.category-card img{min-height:160px;height:160px}
+ .category-card h3{left:10px;bottom:10px;font-size:1.05rem}
+ .gallery-grid img{height:clamp(135px,42vw,210px)}
+ .gallery-showcase .gallery-card img{height:clamp(145px,44vw,230px)}
+ .feature-list,.info-grid,.footer-grid,.review-wall,.story-stat-grid,.about-stats,.location-info-grid{grid-template-columns:minmax(0,1fr)}
+ .info-card,.cart-list,.cart-summary{padding:17px}
+ .form-panel{padding:24px 18px}
+ .form-panel h1{font-size:1.85rem}
+ .form-image{min-height:230px}
+ .form-image-copy{left:18px;right:18px;bottom:20px}
+ .form-image-copy h2{font-size:1.65rem}
+ .field{margin:13px 0}
+ .field input,.field textarea,.field select{padding:11px 12px}
+ .cart-row{grid-template-columns:58px minmax(0,1fr);gap:10px}
+ .cart-row img{width:58px;height:58px}
+ .cart-row>:last-child{grid-column:2;justify-self:start}
+ .qty{flex-wrap:wrap}
+ .offer-banner{padding:20px;gap:14px}
+ .offer-banner h2{font-size:1.6rem}
+ .location-note{padding:18px}
+ .footer{padding-top:36px}
+ .footer-grid{gap:20px}
+ .footer-bottom{font-size:.76rem}
+ .map-frame{height:280px}
+ .table-responsive{overflow-x:auto;-webkit-overflow-scrolling:touch}
+ table{font-size:.85rem}
+ .back-to-top{right:12px;bottom:12px}
+}
+@media(max-width:380px){
+ .container{width:calc(100% - 22px)}
+ .brand{max-width:calc(100% - 112px)}
+ .brand-logo-img{width:35px;height:35px;flex-basis:35px}
+ .brand-name{font-size:.9rem!important}
+ .brand-name small{font-size:.42rem!important;letter-spacing:.7px!important}
+ .menu-toggle{font-size:.7rem;padding:6px}
+ .theme-switch{transform:scale(.78)}
+ .nav-actions{gap:2px}
+ .product-grid,.category-grid,.gallery-grid,.gallery-showcase,.gallery-mosaic{gap:8px}
+ .product-info{padding:9px}
+ .product-info h3{font-size:.92rem}
+ .small-btn,.btn{overflow-wrap:anywhere}
+ .hero-content .btn{padding:9px 10px;font-size:.82rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Topline: "Freshly baked every day" sirf large screen par dikhe */
+@media(max-width:768px){
+ .topline .container>span:first-child{display:none}
+}
+
+/* Small screens (hamburger menu): login icon -> "Create Account" inside menu */
+.nav-links a.nav-account-link{display:none}
+.mobile-cart-tab{display:none}
+@media(max-width:1000px){
+ .nav-actions .auth-nav,.nav-actions .logout-btn{display:none!important}
+ .nav-links a.nav-account-link{display:block}
+}
+
+/* Home page, small screens: cart button = fixed brown tab stuck to the left edge of the screen */
+@media(max-width:700px){
+ .nav-cart-hide-small{display:none!important}
+ .mobile-cart-tab{
+  display:flex;align-items:center;justify-content:center;position:fixed;z-index:75;
+  left:0;top:66%;transform:translateY(-50%);
+  width:34px;height:40px;padding:0;
+  background:#3b2418;color:#e8d5b7;text-decoration:none;
+  border:1px solid rgba(232,213,183,.28);border-left:0;
+  border-radius:0 12px 12px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,.28);
+  -webkit-tap-highlight-color:transparent
+ }
+ .mobile-cart-tab .mobile-cart-svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+ .mobile-cart-tab .cart-count{position:absolute;top:-7px;right:-7px;min-width:17px;height:17px;padding:0 4px;border:2px solid #3b2418;border-radius:20px;background:#e5c99b;color:#24150f;font-size:10px;font-weight:800;line-height:1;display:grid;place-items:center}
+}
+
+/* Slider: arrow icons white (circle colour unchanged) */
+#homeSlider .carousel-control-prev-icon{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m15 5-7 7 7 7'/%3E%3C/svg%3E")}
+#homeSlider .carousel-control-next-icon{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 5 7 7-7 7'/%3E%3C/svg%3E")}
+
+/* Slider dots: dark theme keeps the light colour, light theme gets dark brown */
+body:not(.dark) #homeSlider .carousel-indicators [data-bs-target]{background:#3b2418;box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+body:not(.dark) #homeSlider .carousel-indicators .active{background:#3b2418}
+
+/* No golden box/outline on hover/focus/click: theme switch + slider arrows */
+.theme-switch:is(:hover,:focus,:focus-visible,:active),
+#homeSlider .carousel-control-prev:is(:hover,:focus,:focus-visible,:active),
+#homeSlider .carousel-control-next:is(:hover,:focus,:focus-visible,:active),
+body.dark .theme-switch:is(:hover,:focus,:focus-visible,:active),
+body.dark #homeSlider .carousel-control-prev:is(:hover,:focus,:focus-visible,:active),
+body.dark #homeSlider .carousel-control-next:is(:hover,:focus,:focus-visible,:active){
+  outline:none !important;
+  outline-offset:0 !important;
+  box-shadow:none !important;
+  border-color:transparent !important;
+}
+.theme-switch:is(:hover,:focus,:focus-visible,:active){background:transparent !important}
+#homeSlider .carousel-control-prev:is(:hover,:focus,:focus-visible,:active),
+#homeSlider .carousel-control-next:is(:hover,:focus,:focus-visible,:active){background:transparent !important}
+
+/* Login & signup pages: page never scrolls; header + card + footer all fit the screen */
+html:has(body.auth-no-scroll){height:100%;overflow:hidden}
+body.auth-no-scroll{height:100vh;height:100dvh;overflow:hidden;display:flex;flex-direction:column}
+body.auth-no-scroll>.navbar,body.auth-no-scroll>.topline,body.auth-no-scroll>.footer{flex:0 0 auto}
+body.auth-no-scroll>.auth-page-main{flex:1 1 auto;min-height:0!important;display:flex;align-items:center;justify-content:center;padding:clamp(8px,1.8vh,22px) 20px!important}
+body.auth-no-scroll .auth-page-card{width:100%;height:100%;min-height:0!important;max-height:680px}
+body.auth-no-scroll .auth-page-photo{min-height:0!important;height:100%}
+body.auth-no-scroll .auth-page-form{align-self:stretch;display:flex;flex-direction:column;min-height:0;overflow-y:auto;scrollbar-width:none;padding-top:clamp(10px,2vh,28px);padding-bottom:clamp(10px,2vh,28px)}
+body.auth-no-scroll .auth-page-form::-webkit-scrollbar{display:none}
+body.auth-no-scroll .auth-fit{width:100%;margin:auto 0}
+
+/* smaller form text + spacing so the signup form fits without scrolling */
+body.auth-no-scroll .auth-page-form h2{font-size:clamp(1.45rem,3.4vh,2rem);margin:2px 0 4px}
+body.auth-no-scroll .auth-page-form .kicker{font-size:.7rem}
+body.auth-no-scroll .auth-page-form .muted{margin:0;font-size:.86rem}
+body.auth-no-scroll .auth-page-form .auth-tabs{margin-bottom:clamp(8px,1.6vh,16px)}
+body.auth-no-scroll .auth-page-form .field{margin:clamp(7px,1.4vh,13px) 0}
+body.auth-no-scroll .auth-page-form .field label{font-size:.86rem;margin-bottom:4px}
+body.auth-no-scroll .auth-page-form .field input{padding:clamp(8px,1.3vh,11px) 12px;font-size:.9rem}
+body.auth-no-scroll .auth-page-form .btn-primary{padding:10px}
+body.auth-no-scroll .auth-page-form .auth-switch-note{margin-top:10px;font-size:.84rem}
+body.auth-no-scroll .auth-page-form .form-message{margin:6px 0 0;font-size:.84rem}
+body.auth-no-scroll .auth-page-form .drawer-continue{margin-top:6px}
+
+/* compact footer (still shown) */
+body.auth-no-scroll .footer{padding:14px 0 8px}
+body.auth-no-scroll .footer-grid{gap:18px}
+body.auth-no-scroll .footer h3{font-size:.95rem;margin:0 0 3px}
+body.auth-no-scroll .footer p{font-size:.8rem;line-height:1.35;margin:0 0 3px}
+body.auth-no-scroll .footer a{font-size:.8rem;line-height:1.3;margin:2px 0}
+body.auth-no-scroll .footer .brand-logo-img{max-height:38px;width:auto}
+body.auth-no-scroll .footer-bottom{margin-top:8px;padding-top:8px;font-size:.74rem}
+@media(max-height:820px){
+  body.auth-no-scroll .footer-grid>div:first-child p{display:none}
+  body.auth-no-scroll .footer a{display:inline-block;margin:2px 12px 2px 0}
+}
+@media(max-height:700px){
+  body.auth-no-scroll .footer-grid{display:none}
+  body.auth-no-scroll .footer{padding:6px 0}
+  body.auth-no-scroll .footer-bottom{margin:0;padding-top:0;border-top:0}
+}
+@media(max-width:760px){
+  body.auth-no-scroll>.auth-page-main{padding:8px 12px!important}
+  body.auth-no-scroll .auth-page-card{grid-template-columns:1fr;max-height:none}
+  body.auth-no-scroll .auth-page-photo{display:none}
+  body.auth-no-scroll .auth-page-form{padding:14px 18px}
+  body.auth-no-scroll .footer-grid{display:none}
+  body.auth-no-scroll .footer{padding:6px 0}
+  body.auth-no-scroll .footer-bottom{margin:0;padding-top:0;border-top:0;font-size:.7rem}
+}
+
+/* Login & signup pages: footer removed */
+body.auth-no-scroll>.footer{display:none!important}
+
+/* Order popup: close (x) button, top-right */
+.ot-modal .ot-close{display:grid;place-items:center;top:14px;right:14px;width:34px;height:34px;padding:0 0 3px;font-size:1.6rem;line-height:1;color:#fff;background:rgba(255,255,255,.22);border:0;border-radius:50%;cursor:pointer}
+.ot-modal .ot-close:hover{background:rgba(255,255,255,.4)}
+
+/* Back-to-top: arrow stays beige on hover (button colours unchanged) */
+.back-to-top:is(:hover,:focus,:focus-visible,:active){color:#f3e6d3!important}
+.back-to-top:is(:hover,:focus,:focus-visible,:active) svg,
+.back-to-top:is(:hover,:focus,:focus-visible,:active) svg *{color:#f3e6d3!important;stroke:#f3e6d3!important}
+
+/* Back-to-top: click/focus/active look exactly like hover (dark brown, never beige) */
+button.back-to-top:is(:hover,:focus,:focus-visible,:active):not(:disabled):not([disabled]){
+  background:linear-gradient(145deg,#3b2418,#24150f)!important;
+  background-color:#3b2418!important;
+  border-color:#8a6548!important;
+  color:#f3e6d3!important;
+  outline:none!important;
+  box-shadow:0 10px 24px #24150f55,inset 0 1px #ffffff26!important
+}
+button.back-to-top:is(:hover,:focus,:active){transform:translateY(-3px)}
+button.back-to-top:focus-visible{outline:3px solid #e8c7a6!important;outline-offset:3px!important}
+
+/* Category search bar: no black box when clicking into the input */
+.cat-search input:is(:hover,:focus,:focus-visible,:active),
+body.dark .cat-search input:is(:hover,:focus,:focus-visible,:active){outline:none!important;box-shadow:none!important;border:0!important}
+
+/* Password show/hide eye button (login & signup) */
+.pw-wrap{position:relative;display:block;width:100%}
+.pw-wrap input{padding-right:44px!important}
+.pw-wrap input::-ms-reveal,.pw-wrap input::-ms-clear{display:none}
+.pw-wrap button.pw-toggle,
+.pw-wrap button.pw-toggle:is(:hover,:focus,:focus-visible,:active){
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  width:30px;height:30px;padding:0;margin:0;display:grid;place-items:center;
+  background:transparent!important;background-color:transparent!important;
+  border:0!important;border-radius:8px;box-shadow:none!important;outline:none!important;
+  color:#4b2e20!important;cursor:pointer;-webkit-tap-highlight-color:transparent
+}
+.pw-wrap button.pw-toggle:is(:hover,:active){color:#2a1710!important;background-color:#00000012!important}
+.pw-wrap button.pw-toggle:focus-visible{outline:2px solid #d7a653!important;outline-offset:1px!important}
+.pw-wrap button.pw-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;display:block}
+body.dark .pw-wrap button.pw-toggle,
+body.dark .pw-wrap button.pw-toggle:is(:hover,:focus,:focus-visible,:active){color:#ecd9c3!important}
+body.dark .pw-wrap button.pw-toggle:is(:hover,:active){color:#fff7ed!important;background-color:#ffffff1a!important}
+/* Eye colour follows the actual bar colour: brown bar -> beige eye (above), white bar -> brown eye.
+   When the browser autofills a saved password it paints the bar white/lavender (even in dark theme),
+   so the eye turns brown there too. */
+body.dark .pw-wrap input:-webkit-autofill~button.pw-toggle,
+body.dark .pw-wrap input:-webkit-autofill~button.pw-toggle:is(:hover,:focus,:focus-visible,:active){color:#4b2e20!important}
+body.dark .pw-wrap input:autofill~button.pw-toggle,
+body.dark .pw-wrap input:autofill~button.pw-toggle:is(:hover,:focus,:focus-visible,:active){color:#4b2e20!important}
+body.dark .pw-wrap input:-webkit-autofill~button.pw-toggle:is(:hover,:active){color:#2a1710!important;background-color:#00000012!important}
+body.dark .pw-wrap input:autofill~button.pw-toggle:is(:hover,:active){color:#2a1710!important;background-color:#00000012!important}
+
+/* ===== Dark theme: checkout & thank-you pages (soft dark cards instead of white) ===== */
+.ck-back{margin-top:20px}
+
+/* hero ("Complete Your Order") */
+body.dark .checkout-wrap:before{
+  background:
+    radial-gradient(ellipse at 12% 0%,rgba(215,166,83,.26),transparent 55%),
+    radial-gradient(ellipse at 100% 100%,rgba(138,94,64,.22),transparent 60%),
+    linear-gradient(135deg,#3b2b20,#2b2019 58%,#231a15);
+  border:1px solid #5a432f;
+  box-shadow:0 14px 38px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.06)
+}
+body.dark .checkout-title .kicker{color:#f0c878;background:#3a2b20;border-color:#6c5035}
+body.dark .checkout-title h1{color:#f6ede3}
+body.dark .checkout-title p{color:#d3c1b2}
+
+/* cards */
+body.dark .checkout-card,
+body.dark .ty-card{
+  background:linear-gradient(160deg,#2d241e,#271f19);
+  border:1px solid #4a3a2f;
+  box-shadow:0 12px 30px rgba(0,0,0,.35)
+}
+body.dark .checkout-card h2,
+body.dark .ck-h,
+body.dark .ck-sum-h,
+body.dark .ty-card h3{color:#f6ede3}
+body.dark #orderLocationText,
+body.dark .ck-back{color:#c5b4a5}
+body.dark .ck-back:hover{color:#f0c878}
+body.dark #changeOrderType,
+body.dark .checkout-card .btn-outline{background:transparent;border-color:#8a6548;color:#e8c7a6}
+
+/* steps: Payment > Review */
+body.dark .ck-step{background:#2a211b;color:#c5b4a5;box-shadow:inset 0 0 0 1px #4a3a2f}
+body.dark .ck-step.is-on{background:#3b2418;color:#f6e3c4;box-shadow:inset 0 0 0 1px #8a6548}
+
+/* payment options & info boxes */
+body.dark .ck-pay,
+body.dark .payment-option{background:#342a23;border-color:#4d3d31;color:#e8d6c2}
+body.dark .ck-pay:has(input:checked),
+body.dark .payment-option:has(input:checked){background:#3f3025;border-color:#d7a653;box-shadow:0 0 0 1px #d7a653}
+body.dark .ck-pay input,
+body.dark .payment-option input{accent-color:#d7a653}
+body.dark .ck-pay strong{color:#f6ede3}
+body.dark .ck-pay span{color:#b5a395}
+body.dark .ck-box,
+body.dark .checkout-note{background:#342a23;color:#c5b4a5}
+body.dark .ck-box b{color:#f0dfc8}
+body.dark .ck-box p{color:#c5b4a5}
+
+/* buttons */
+body.dark .ck-btn{background:linear-gradient(110deg,#b97d38,#d7a653);border-color:#d7a653;color:#24150f}
+body.dark .ck-btn:disabled{background:#3a2f28;border-color:#4d3d31;color:#8f8176}
+body.dark .ck-btn.ck-outline{background:transparent;color:#f0dfc8;border-color:#d7a653}
+body.dark .ck-btn.ck-ghost{background:transparent;color:#e6d4bf;border-color:#5a4636}
+
+/* order summary + items */
+body.dark .ck-sum-row,
+body.dark .checkout-total{color:#c5b4a5}
+body.dark .ck-sum-row b{color:#f6ede3}
+body.dark .ck-sum-total{border-top-color:#4a3a2f;color:#c5b4a5}
+body.dark .ck-sum-total b,
+body.dark .checkout-total span:last-child{color:#f0c878}
+body.dark .ck-item strong,
+body.dark .checkout-summary-item strong{color:#f6ede3}
+body.dark .ck-item small,
+body.dark .checkout-summary-item .muted{color:#b5a395}
+body.dark .ck-item>b,
+body.dark .checkout-summary-item>b{color:#e8c7a6}
+body.dark .ck-item img,
+body.dark .checkout-summary-item img,
+body.dark .ty-item img{background:#3a2f28;border-color:#4a3a2f}
+
+/* checkout form fields (if shown) */
+body.dark .checkout-field label{color:#e8d6c2}
+body.dark .checkout-field input,
+body.dark .checkout-field select,
+body.dark .checkout-field textarea{background:#241c17;border-color:#4d3d31;color:#f6ede3}
+
+/* thank-you page */
+body.dark .ty-sum h2{color:#f0c878}
+body.dark .ty-meta{color:#b5a395}
+body.dark .ty-meta strong{color:#d7b27a}
+body.dark .ty-lines p,
+body.dark .ty-row{color:#c5b4a5}
+body.dark .ty-item strong{color:#f6ede3}
+body.dark .ty-item small{color:#b5a395}
+body.dark .ty-item>b{color:#f0dfc8}
+body.dark .ty-tot,
+body.dark .ty-row.is-total{border-top-color:#4a3a2f}
+body.dark .ty-row.is-total{color:#f6ede3}
+
+/* ===== Signup form enhance: 2-column password row, field icons, perks line - fits without scrolling ===== */
+#signupForm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px}
+#signupForm>.field:nth-child(-n+2),#signupForm>.btn-primary{grid-column:1/-1}
+#signupForm .field{margin:clamp(5px,1vh,10px) 0}
+#signupForm .field label{font-size:.84rem;margin-bottom:3px;letter-spacing:.2px}
+#signupForm .field input{min-height:clamp(40px,5.8vh,48px);font-size:.98rem;padding-top:clamp(7px,1vh,10px);padding-bottom:clamp(7px,1vh,10px);padding-left:40px;border-radius:12px;background-repeat:no-repeat;background-position:13px center;background-size:18px}
+#signupName{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a704d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7'/%3E%3C/svg%3E")}
+#signupEmail{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a704d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2'/%3E%3Cpath d='M3 7l9 6 9-6'/%3E%3C/svg%3E")}
+#signupPassword,#confirmPassword{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a704d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E")}
+#signupForm .field input:focus{border-color:#b8863b;box-shadow:0 0 0 4px rgba(184,134,59,.18)}
+#signupForm .btn-primary{margin-top:8px;padding:11px 18px;font-size:1rem}
+#signupForm .btn-primary::after{content:"\2192";display:inline-block;margin-left:10px;transition:transform .2s}
+#signupForm .btn-primary:hover::after{transform:translateX(5px)}
+.signup-perks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin:12px 0 0;padding:0;font-size:.78rem;color:#806b5b}
+.signup-perks li::before{content:"\2713";color:#b8863b;font-weight:800;margin-right:5px}
+body.dark .signup-perks{color:#c5b4a5}
+body.auth-no-scroll .auth-page-form .auth-switch-note{margin-top:10px}
+/* short laptop screens: drop the extras so nothing needs scrolling and text stays big */
+@media (max-height:760px){.signup-sub,.signup-perks{display:none}}
+/* narrow phones: one column */
+@media (max-width:560px){#signupForm{grid-template-columns:1fr}}
+
+/* ===== Login & signup: big card that takes most of the page width/height, photo + form both large ===== */
+@media (min-width:761px){
+  body.auth-no-scroll>.auth-page-main{padding:clamp(10px,2vh,24px) clamp(14px,2.4vw,44px)!important}
+  body.auth-no-scroll .auth-page-card{max-width:1600px;max-height:none!important;height:100%;width:100%;border-radius:26px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  body.auth-no-scroll .auth-page-photo img{object-position:50% 58%}
+  body.auth-no-scroll .auth-page-photo:not(.is-poster):after{background:linear-gradient(0deg,rgba(28,16,10,.88) 0%,rgba(28,16,10,.45) 36%,rgba(28,16,10,.05) 66%)}
+  body.auth-no-scroll .auth-page-photo:not(.is-poster)>div{top:auto;bottom:clamp(26px,6vh,64px);left:clamp(28px,4vw,64px);right:clamp(24px,3.4vw,56px)}
+  body.auth-no-scroll .auth-page-photo:not(.is-poster) h1{font-size:clamp(2rem,3.2vw,3.2rem);max-width:none;text-shadow:0 2px 18px rgba(20,10,5,.7)}
+  body.auth-no-scroll .auth-page-form{padding-left:clamp(28px,5vw,96px);padding-right:clamp(28px,5vw,96px);justify-content:center}
+  body.auth-no-scroll .auth-fit{max-width:560px;margin:auto}
+  /* bigger, more comfortable form text now that the form has room */
+  body.auth-no-scroll .auth-page-form h2{font-size:clamp(1.8rem,4.6vh,2.7rem)}
+  body.auth-no-scroll .auth-page-form .kicker{font-size:.76rem}
+  body.auth-no-scroll .auth-page-form .muted{font-size:.95rem}
+  body.auth-no-scroll .auth-page-form .field label{font-size:.9rem}
+  body.auth-no-scroll .auth-page-form .field input{font-size:1rem;min-height:clamp(42px,6vh,50px)}
+  body.auth-no-scroll .auth-page-form .btn-primary{font-size:1.02rem}
+  body.auth-no-scroll .auth-page-form .auth-switch-note{font-size:.92rem}
+}
+
+/* Order popup: no inner scrollbar — the whole popup fits on small / short screens */
+.ot-overlay{padding:10px;overflow:hidden}
+.ot-modal{max-height:none;overflow:hidden}
+@media(max-height:820px){
+  .ot-head{padding:14px 0}
+  .ot-logo{width:60px;height:60px;border-radius:16px}
+  .ot-logo img{width:48px;height:48px}
+  .ot-body{padding:12px 20px 0}
+  .ot-title{font-size:1.1rem;margin-bottom:10px}
+  .ot-toggle button{padding:8px 20px}
+  .ot-sub{margin:10px 0 8px;font-size:.84rem}
+  .ot-locate{padding:7px 16px}
+  .ot-hint{margin-top:4px}
+  .ot-field{margin-top:8px}
+  .ot-select{padding-top:10px;padding-bottom:10px}
+  .ot-branch{margin-top:10px;padding:10px}
+  .ot-foot{margin-top:10px;padding:12px 20px 16px}
+  .ot-submit{padding:12px}
+}
+@media(max-height:640px){
+  .ot-head{padding:8px 0}
+  .ot-logo{width:46px;height:46px;border-radius:13px}
+  .ot-logo img{width:36px;height:36px}
+  .ot-body{padding-top:8px}
+  .ot-title{font-size:1rem;margin-bottom:8px}
+  .ot-toggle button{padding:6px 18px}
+  .ot-field label{margin-bottom:3px}
+  .ot-branch{font-size:.8rem}
+  .ot-foot{margin-top:8px;padding:10px 20px 12px}
+  .ot-close{top:8px;right:10px;width:30px;height:30px}
+}
+
+/* Contact form "Send message" button: single espresso mocha line instead of blue (incl. "Sending…" state) */
+#contactForm button[type="submit"],
+#contactForm button[type="submit"]:focus,
+#contactForm button[type="submit"]:focus-visible,
+#contactForm button[type="submit"]:active,
+#contactForm button[type="submit"]:disabled {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #3b2418 !important;
+  --bs-btn-focus-shadow-rgb: 59, 36, 24;
+  --bs-btn-focus-box-shadow: none;
+}
+
+/* Feedback form "Submit feedback" button: single espresso mocha line instead of blue (incl. "Sending…" state) */
+#reviewForm button[type="submit"],
+#reviewForm button[type="submit"]:hover,
+#reviewForm button[type="submit"]:focus,
+#reviewForm button[type="submit"]:focus-visible,
+#reviewForm button[type="submit"]:active,
+#reviewForm button[type="submit"]:disabled {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #3b2418 !important;
+  --bs-btn-focus-shadow-rgb: 59, 36, 24;
+  --bs-btn-focus-box-shadow: none;
+  --bs-btn-disabled-border-color: #3b2418;
+}
+
+/* ===== Cart "Place demo order" button: brown line instead of blue (hover / click / focus) ===== */
+#checkoutBtn,
+#checkoutBtn:hover,
+#checkoutBtn:focus,
+#checkoutBtn:focus-visible,
+#checkoutBtn:active,
+#drawerCheckoutBtn:not(:disabled),
+#drawerCheckoutBtn:not(:disabled):hover,
+#drawerCheckoutBtn:not(:disabled):focus,
+#drawerCheckoutBtn:not(:disabled):focus-visible,
+#drawerCheckoutBtn:not(:disabled):active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #3b2418 !important;
+  --bs-btn-focus-shadow-rgb: 59, 36, 24;
+  --bs-btn-focus-box-shadow: none;
+}
+
+/* ===== Signup icons: icon ab input ke background mein nahi, field ke pseudo-element mein hai.
+   Browser autofill (saved email/name select karne par) input ka background-image hata deta hai,
+   isliye pehle icon gayab ho jata tha. Ab icon hamesha apni jagah rehta hai. ===== */
+#signupForm { --sf-h: clamp(40px, 5.8vh, 48px) }
+#signupForm .field { position: relative }
+#signupForm .field input { background-image: none !important; height: var(--sf-h) }
+#signupForm .field::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: var(--sf-h);
+  background-repeat: no-repeat;
+  background-position: 13px center;
+  background-size: 18px;
+  pointer-events: none;
+  z-index: 2;
+}
+#signupForm .field:nth-child(1)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a704d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7'/%3E%3C/svg%3E") }
+#signupForm .field:nth-child(2)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a704d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='2'/%3E%3Cpath d='M3 7l9 6 9-6'/%3E%3C/svg%3E") }
+#signupForm .field:nth-child(3)::before,
+#signupForm .field:nth-child(4)::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a704d' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") }
+
+/* autofill ka neela/lavender background hata kar form ka apna rang rakhna */
+#signupForm .field input:-webkit-autofill,
+#signupForm .field input:-webkit-autofill:hover,
+#signupForm .field input:-webkit-autofill:focus,
+#signupForm .field input:autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fffdfb inset !important;
+  box-shadow: 0 0 0 1000px #fffdfb inset !important;
+  -webkit-text-fill-color: #2a2021 !important;
+  caret-color: #2a2021;
+  transition: background-color 9999s ease-out 0s;
+}
+#signupForm .field input:-webkit-autofill:focus,
+#signupForm .field input:autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fffdfb inset, 0 0 0 4px rgba(184, 134, 59, .18) !important;
+  box-shadow: 0 0 0 1000px #fffdfb inset, 0 0 0 4px rgba(184, 134, 59, .18) !important;
+}
+body.dark #signupForm .field input:-webkit-autofill,
+body.dark #signupForm .field input:-webkit-autofill:hover,
+body.dark #signupForm .field input:-webkit-autofill:focus,
+body.dark #signupForm .field input:autofill {
+  -webkit-box-shadow: 0 0 0 1000px #302721 inset !important;
+  box-shadow: 0 0 0 1000px #302721 inset !important;
+  -webkit-text-fill-color: #fff4eb !important;
+  caret-color: #fff4eb;
+}

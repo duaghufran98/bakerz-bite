@@ -1,0 +1,29 @@
+/* Home page – three small refinements (no new sections) */
+
+/* 1) Philosophy trio: quiet columns instead of boxes */
+.feature-trio{gap:26px}
+.feature-trio .feature{background:transparent;border:0;border-radius:0;border-top:2px solid #c6a16b;padding:14px 0 0}
+
+/* 2) Offer code as a perforated ticket */
+.offer-banner .code-ticket{
+  all:unset;box-sizing:border-box;cursor:pointer;flex:none;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  min-width:170px;padding:14px 26px;margin:0 0 0 auto;
+  color:#f3d9a4;border:2px dashed #c6a16b;border-radius:12px;
+  background:#ffffff12;transition:background .2s,transform .2s;
+}
+.offer-banner .code-ticket span{font:700 1.35rem 'Playfair Display',serif;letter-spacing:.12em}
+.offer-banner .code-ticket small{font-size:.76rem;color:#ead7cc}
+.offer-banner .code-ticket:hover{background:#ffffff22;transform:rotate(-1.5deg)}
+.offer-banner .code-ticket:focus-visible{outline:3px solid #f3d9a4;outline-offset:3px}
+.offer-banner{flex-wrap:wrap}.offer-banner>div:first-child{flex:1 1 280px}
+.offer-banner>.btn{margin-left:0}
+
+/* 3) Reviews: gold top rule, serif quote, staggered middle card */
+.reviews-home .review-card{border-top:3px solid #c6a16b;padding:24px}
+.reviews-home .review-card p{font:italic 500 1.12rem/1.55 'Playfair Display',serif;margin:10px 0 14px}
+.reviews-home .rating-stars{font-size:1.1rem;cursor:default;letter-spacing:3px}
+.reviews-home .review-card strong{font-size:.86rem;color:var(--muted)}
+@media(min-width:701px){.reviews-home .review-card:nth-child(2){transform:translateY(22px)}}
+@media(max-width:700px){.offer-banner .code-ticket{margin:16px 0 0;width:100%}}
+.reviews-home{margin-bottom:38px}

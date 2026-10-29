@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../images/logo-bakerz-bite.png?v=4" rel="icon" type="image/png"/>
+<title>Login | Bakerz Bite</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/style.css?v=31" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script><script defer="" src="../js/emailjs-config.js"></script><script defer="" src="../js/products-data.js?v=2"></script><script defer="" src="../js/emailjs-forms.js"></script><script defer="" src="../js/bakerz-app.js?v=29"></script>
+<script>
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("pageshow", function () {
+        window.scrollTo(0, 0);
+    });
+</script>
+<link href="../css/responsive.css?v=24" rel="stylesheet"/>
+</head>
+<body class="auth-no-scroll">
+<header class="navbar">
+<div class="container nav-inner"><a class="brand" href="../index.html"><img alt="Bakerz Bite signature bakery emblem" class="brand-logo-img" src="../images/logo-bakerz-bite.png?v=4"/><span class="brand-name">Bakerz <span class="brand-bite">Bite</span><small>Bakery &amp; patisserie</small></span></a><button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle" type="button"><span aria-hidden="true" class="hamburger-lines"><i></i><i></i><i></i></span><span class="menu-toggle-label">Menu</span></button>
+<nav class="nav-links" id="navLinks"><a class="" href="../index.html">Home</a><a class="" href="menu.html">Menu</a><a class="" href="gallery.html">Gallery</a><a class="" href="offers.html">Offers</a><a class="" href="about.html">About</a><a class="" href="contact.html">Contact</a><a class="" href="location.html">Location</a><a class="" href="faq.html">FAQ</a>
+<a class="nav-account-link" href="signup.html" id="menuAccountLink">Create Account</a></nav>
+<div class="nav-actions"><button aria-checked="false" aria-label="Switch to dark theme" class="theme-switch" id="themeToggle" role="switch" title="Switch theme" type="button"><span class="theme-switch-track"><span aria-hidden="true" class="theme-switch-knob" id="themeIcon">☀</span></span></button><a aria-label="Open shopping cart" class="nav-cart-icon" data-cart-open="" href="#cartDrawer" title="Shopping cart"><span aria-hidden="true" class="cart-symbol">🛒</span><span class="cart-count" data-cart-count="">0</span></a><a aria-label="Login" class="icon-btn auth-nav" href="login.html" id="accountNav" title="Login"><span aria-hidden="true" class="account-status-icon" id="accountStatusIcon"><svg aria-hidden="true" class="profile-icon-svg" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.1"></circle><path d="M5.8 19c.5-3.4 2.7-5.2 6.2-5.2s5.7 1.8 6.2 5.2"></path></svg></span><span class="visually-hidden" id="accountNavText">Login</span></a></div>
+</div>
+</header>
+<main class="auth-page-main"><section class="auth-page-card">
+<div class="auth-page-form">
+<div aria-label="Login or sign up" class="auth-tabs" role="tablist">
+<button aria-controls="panelLogin" aria-selected="true" class="auth-tab active" data-auth-tab="login" id="tabLogin" role="tab" type="button">Login</button>
+<button aria-controls="panelSignup" aria-selected="false" class="auth-tab" data-auth-tab="signup" id="tabSignup" role="tab" type="button">Sign up</button>
+</div>
+<div aria-labelledby="tabLogin" class="auth-panel" id="panelLogin" role="tabpanel">
+<span class="kicker">Welcome back</span><h2>Login to Bakerz Bite</h2><p class="muted">Your favourite treats are waiting.</p>
+<form id="loginForm">
+<div class="field"><label for="loginEmail">Email address</label><input autocomplete="email" id="loginEmail" name="email" placeholder="you@example.com" required="" type="email"/></div>
+<div class="field"><label for="loginPassword">Password</label><input autocomplete="current-password" id="loginPassword" minlength="6" name="password" placeholder="Enter your password" required="" type="password"/></div>
+<button class="btn btn-primary w-100" type="submit">Login</button>
+</form>
+<p class="auth-switch-note">New to Bakerz Bite? <a data-auth-switch="signup" href="#signup">Create an account</a></p>
+</div>
+<div aria-labelledby="tabSignup" class="auth-panel" hidden="" id="panelSignup" role="tabpanel">
+<span class="kicker">Join our bakery family</span><h2>Create your account</h2><p class="muted signup-sub">A few details and you're all set.</p>
+<form id="signupForm">
+<div class="field"><label for="signupName">Full name</label><input autocomplete="name" id="signupName" minlength="2" name="name" placeholder="Your full name" required=""/></div>
+<div class="field"><label for="signupEmail">Email address</label><input autocomplete="email" id="signupEmail" name="email" placeholder="you@example.com" required="" type="email"/></div>
+<div class="field"><label for="signupPassword">Password</label><input autocomplete="new-password" id="signupPassword" minlength="8" name="password" placeholder="Min. 8 characters" required="" type="password"/></div>
+<div class="field"><label for="confirmPassword">Confirm password</label><input autocomplete="new-password" id="confirmPassword" minlength="8" name="confirmPassword" placeholder="Re-enter password" required="" type="password"/></div>
+<button class="btn btn-primary w-100" type="submit">Create account</button>
+</form><ul class="signup-perks"><li>Free to join</li><li>Takes under a minute</li><li>No spam</li></ul>
+<p class="auth-switch-note">Already have an account? <a data-auth-switch="login" href="#login">Login</a></p>
+</div>
+<p aria-live="polite" class="form-message" id="authMessage" role="status"></p>
+<a class="drawer-continue" href="../index.html">← Continue browsing</a>
+</div>
+<div class="auth-page-photo"><img alt="Bakerz Bite chef hat, paper bag, croissants, cookies and muffins" id="authPhotoImg" src="../images/login-bakerz-bite.jpg"/><div><span class="eyebrow" id="authPhotoEyebrow">A LITTLE JOY, FRESH FROM THE OVEN</span><h1 id="authPhotoTitle">Welcome back.</h1><p id="authPhotoText">Sign in and make your next sweet moment easy.</p></div></div>
+</section></main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><a class="brand" href="../index.html"><img alt="Bakerz Bite signature bakery emblem" class="brand-logo-img" src="../images/logo-bakerz-bite.png?v=4"/><span class="brand-name">Bakerz <span class="brand-bite">Bite</span><small>Bakery &amp;
+                                patisserie</small></span></a>
+<p>Small-batch bakes, timeless flavours, and a little sweetness in every day.</p>
+<p>Freshness you can feel. Quality you can taste.</p>
+</div>
+<div>
+<h3>Explore</h3><a href="menu.html">Our Menu</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">Our Story</a>
+</div>
+<div>
+<h3>Customer care</h3><a href="contact.html">Contact us</a><a href="location.html">Find our
+                        bakery</a><a href="faq.html">FAQs</a><a href="feedback.html">Feedback</a><a href="sitemap.html">Sitemap</a>
+</div>
+<div>
+<h3>Visit or call</h3>
+<p>North Nazimabad, Karachi, Pakistan</p>
+<p>+92 300 1234567<br/>hello@bakerzbite.example</p>
+<p>Mon–Sun · 9:00 AM–10:00 PM</p>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Bakerz Bite. Made with care.</span><span>Demo project · HTML, CSS,
+                    JavaScript, JSON, jQuery &amp; Bootstrap concepts</span></div>
+</div>
+</footer>
+<div class="cart-backdrop" data-cart-close=""></div>
+<aside aria-hidden="true" aria-label="Shopping cart" class="cart-drawer" id="cartDrawer">
+<div class="cart-drawer-head">
+<div><span class="kicker">Fresh picks</span>
+<h2>Your Cart <span class="cart-count" data-cart-count="">0</span></h2>
+</div><button aria-label="Close cart" class="drawer-close" data-cart-close="" type="button">×</button>
+</div>
+<div class="cart-drawer-items" id="drawerCartItems">
+<div class="empty-state">
+<h3>Your cart is empty</h3>
+<p>Add something freshly baked to get started.</p>
+</div>
+</div>
+<div class="cart-drawer-foot">
+<div class="summary-line drawer-subtotal"><span>Subtotal</span><strong id="drawerCartSubtotal">Rs. 0</strong></div>
+<div class="summary-line delivery-line"><span>Delivery charges</span><strong id="drawerDelivery">Rs. 150</strong></div>
+<div class="summary-line summary-total"><span>Total amount</span><strong id="drawerCartTotal">Rs. 150</strong></div><button class="btn btn-primary" disabled="" id="drawerCheckoutBtn" type="button">Continue to checkout</button><a class="drawer-continue" href="menu.html">Continue shopping</a>
+</div>
+</aside>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script defer src="../js/password-toggle.js?v=1"></script><script defer src="../js/auth-fit.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Bakerz Bite bakery — cakes, pastries, cookies and pies freshly baked with care." name="description"/>
+<link href="../images/logo-bakerz-bite.png?v=4" rel="icon" type="image/png"/>
+<title>Product details | Bakerz Bite</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/style.css?v=31" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>jQuery(function ($) { $('.fade-in').hide().fadeIn(500); })</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script><script defer="" src="../js/emailjs-config.js"></script><script defer="" src="../js/products-data.js?v=2"></script><script defer="" src="../js/emailjs-forms.js"></script><script defer="" src="../js/bakerz-app.js?v=29"></script>
+<link href="../css/responsive.css?v=24" rel="stylesheet"/>
+</head>
+<body>
+<div aria-label="Loading product details" aria-live="polite" class="page-loader" id="pageLoader" role="status">
+<div aria-hidden="true" class="pl-stage">
+<div class="pl-orbit"><span class="pl-choc"></span><span class="pl-choc"></span><span class="pl-choc"></span><span class="pl-choc"></span><span class="pl-choc"></span><span class="pl-choc"></span><span class="pl-choc"></span></div>
+<img alt="" class="pl-logo" src="../images/logo-bakerz-bite.png?v=4"/>
+</div>
+<span class="pl-sr">Loading product details…</span>
+</div>
+<script>
+(function () {
+  var started = Date.now(), el = document.getElementById('pageLoader');
+  try { if (localStorage.getItem('bakerzTheme') === 'dark') el.classList.add('pl-dark'); } catch (e) {}
+  document.documentElement.classList.add('pl-lock');
+  function finish() {
+    el.classList.add('pl-hide'); document.documentElement.classList.remove('pl-lock');
+    setTimeout(function () { el.remove(); }, 330);
+  }
+  function check() {
+    var ready = document.getElementById('productDetail') && document.getElementById('productDetail').children.length > 0;
+    var waited = Date.now() - started;
+    if ((waited >= 650 && ready) || waited >= 7000) finish(); else setTimeout(check, 100);
+  }
+  setTimeout(check, 100);
+})();
+</script>
+<div class="topline">
+<div class="container"><span>✦ Freshly baked every day</span><span class="visitor" id="visitorCount">Welcome to
+                Bakerz Bite</span></div>
+</div>
+<header class="navbar">
+<div class="container nav-inner"><a class="brand" href="../index.html"><img alt="Bakerz Bite signature bakery emblem" class="brand-logo-img" src="../images/logo-bakerz-bite.png?v=4"/><span class="brand-name">Bakerz <span class="brand-bite">Bite</span><small>Bakery &amp; patisserie</small></span></a><button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle" type="button"><span aria-hidden="true" class="hamburger-lines"><i></i><i></i><i></i></span><span class="menu-toggle-label">Menu</span></button>
+<nav class="nav-links" id="navLinks"><a class="" href="../index.html">Home</a><a class="active" href="menu.html">Menu</a><a class="" href="gallery.html">Gallery</a><a class="" href="offers.html">Offers</a><a class="" href="about.html">About</a><a class="" href="contact.html">Contact</a><a class="" href="location.html">Location</a><a class="" href="faq.html">FAQ</a>
+<a class="nav-account-link" href="signup.html" id="menuAccountLink">Create Account</a></nav>
+<div class="nav-actions"><button aria-checked="false" aria-label="Switch to dark theme" class="theme-switch" id="themeToggle" role="switch" title="Switch theme" type="button"><span class="theme-switch-track"><span aria-hidden="true" class="theme-switch-knob" id="themeIcon">☀</span></span></button><a aria-label="Open shopping cart" class="nav-cart-icon" data-cart-open="" href="#cartDrawer" title="Shopping cart"><span aria-hidden="true" class="cart-symbol">🛒</span><span class="cart-count" data-cart-count="">0</span></a><a aria-label="Login" class="icon-btn auth-nav" href="login.html" id="accountNav" title="Login"><span aria-hidden="true" class="account-status-icon" id="accountStatusIcon"><svg aria-hidden="true" class="profile-icon-svg" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.1"></circle><path d="M5.8 19c.5-3.4 2.7-5.2 6.2-5.2s5.7 1.8 6.2 5.2"></path></svg></span><span class="visually-hidden" id="accountNavText">Login</span></a></div>
+</div>
+</header>
+<main class="fade-in">
+<section class="page-hero">
+<div class="container"><span class="kicker">Made with care</span>
+<h1>Product details</h1>
+<p>Discover the details behind your next favourite bite.</p>
+</div>
+</section>
+<section class="section">
+<div class="container" id="productDetail"></div>
+</section>
+</main>
+<div class="ticker"><span id="tickerText">Bakerz Bite • Freshly baked, thoughtfully made • Loading date, time and
+            location…</span></div>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><a class="brand" href="../index.html"><img alt="Bakerz Bite signature bakery emblem" class="brand-logo-img" src="../images/logo-bakerz-bite.png?v=4"/><span class="brand-name">Bakerz <span class="brand-bite">Bite</span><small>Bakery &amp;
+                                patisserie</small></span></a>
+<p>Small-batch bakes, timeless flavours, and a little sweetness in every day.</p>
+<p>Freshness you can feel. Quality you can taste.</p>
+</div>
+<div>
+<h3>Explore</h3><a href="menu.html">Our Menu</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">Our Story</a>
+</div>
+<div>
+<h3>Customer care</h3><a href="contact.html">Contact us</a><a href="location.html">Find our
+                        bakery</a><a href="faq.html">FAQs</a><a href="feedback.html">Feedback</a><a href="sitemap.html">Sitemap</a>
+</div>
+<div>
+<h3>Visit or call</h3>
+<p>North Nazimabad, Karachi, Pakistan</p>
+<p>+92 300 1234567<br/>hello@bakerzbite.example</p>
+<p>Mon–Sun · 9:00 AM–10:00 PM</p>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Bakerz Bite. Made with care.</span><span>Demo project · HTML, CSS,
+                    JavaScript, JSON, jQuery &amp; Bootstrap concepts</span></div>
+</div>
+</footer>
+<div class="cart-backdrop" data-cart-close=""></div>
+<aside aria-hidden="true" aria-label="Shopping cart" class="cart-drawer" id="cartDrawer">
+<div class="cart-drawer-head">
+<div><span class="kicker">Fresh picks</span>
+<h2>Your Cart <span class="cart-count" data-cart-count="">0</span></h2>
+</div><button aria-label="Close cart" class="drawer-close" data-cart-close="" type="button">×</button>
+</div>
+<div class="cart-drawer-items" id="drawerCartItems">
+<div class="empty-state">
+<h3>Your cart is empty</h3>
+<p>Add something freshly baked to get started.</p>
+</div>
+</div>
+<div class="cart-drawer-foot">
+<div class="summary-line drawer-subtotal"><span>Subtotal</span><strong id="drawerCartSubtotal">Rs. 0</strong></div>
+<div class="summary-line delivery-line"><span>Delivery charges</span><strong id="drawerDelivery">Rs. 150</strong></div>
+<div class="summary-line summary-total"><span>Total amount</span><strong id="drawerCartTotal">Rs. 150</strong></div><button class="btn btn-primary" disabled="" id="drawerCheckoutBtn" type="button">Continue to checkout</button><a class="drawer-continue" href="menu.html">Continue shopping</a>
+</div>
+</aside>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+</body>
+</html>

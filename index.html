@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Bakerz Bite bakery — cakes, pastries, cookies and pies freshly baked with care." name="description"/>
+<link href="images/logo-bakerz-bite.png?v=4" rel="icon" type="image/png"/>
+<title>Home | Bakerz Bite</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css?v=33" rel="stylesheet"/><link href="css/home-touches.css?v=2" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>jQuery(function ($) { $('.fade-in').hide().fadeIn(500); })</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer="" src="js/products-data.js?v=2"></script><script defer="" src="js/bakerz-app.js?v=29"></script><script defer="" src="js/home-touches.js?v=1"></script>
+<link href="css/responsive.css?v=24" rel="stylesheet"/>
+</head>
+<body>
+<div class="topline">
+<div class="container"><span>✦ Freshly baked every day</span><span class="visitor" id="visitorCount">Welcome to
+                Bakerz Bite</span></div>
+</div>
+<header class="navbar">
+<div class="container nav-inner"><a class="brand" href="index.html"><img alt="Bakerz Bite signature bakery emblem" class="brand-logo-img" src="images/logo-bakerz-bite.png?v=4"/><span class="brand-name">Bakerz <span class="brand-bite">Bite</span><small>Bakery &amp; patisserie</small></span></a><button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle" type="button"><span aria-hidden="true" class="hamburger-lines"><i></i><i></i><i></i></span><span class="menu-toggle-label">Menu</span></button>
+<nav class="nav-links" id="navLinks"><a class="active" href="index.html">Home</a><a class="" href="html/menu.html">Menu</a><a class="" href="html/gallery.html">Gallery</a><a class="" href="html/offers.html">Offers</a><a class="" href="html/about.html">About</a><a class="" href="html/contact.html">Contact</a><a class="" href="html/location.html">Location</a><a class="" href="html/faq.html">FAQ</a>
+<a class="nav-account-link" href="html/signup.html" id="menuAccountLink">Create Account</a></nav>
+<div class="nav-actions"><button aria-checked="false" aria-label="Switch to dark theme" class="theme-switch" id="themeToggle" role="switch" title="Switch theme" type="button"><span class="theme-switch-track"><span aria-hidden="true" class="theme-switch-knob" id="themeIcon">☀</span></span></button><a aria-label="Open shopping cart" class="nav-cart-icon nav-cart-hide-small" data-cart-open="" href="#cartDrawer" title="Shopping cart"><span aria-hidden="true" class="cart-symbol">🛒</span><span class="cart-count" data-cart-count="">0</span></a><a aria-label="Login" class="icon-btn auth-nav" href="html/login.html" id="accountNav" title="Login"><span aria-hidden="true" class="account-status-icon" id="accountStatusIcon"><svg aria-hidden="true" class="profile-icon-svg" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.1"></circle><path d="M5.8 19c.5-3.4 2.7-5.2 6.2-5.2s5.7 1.8 6.2 5.2"></path></svg></span><span class="visually-hidden" id="accountNavText">Login</span></a></div>
+</div>
+</header>
+<main class="fade-in">
+<div class="carousel slide carousel-fade" data-bs-interval="5000" data-bs-ride="carousel" id="homeSlider">
+<div class="carousel-indicators"><button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#homeSlider" type="button"></button><button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#homeSlider" type="button"></button><button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#homeSlider" type="button"></button></div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<section class="hero">
+<div class="container">
+<div class="hero-content"><span class="eyebrow">Premium bakery</span>
+<h1>Made with Love,<br/>Served with <span class="gold-heading-text">Joy</span><span aria-hidden="true" class="hero-heart">♡</span></h1>
+<p>From classic favorites to unique creations,<br class="desktop-break"/> we bake happiness into every bite.</p>
+<a class="btn btn-light" href="html/menu.html">Discover Our Signature Bakes <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</section>
+</div>
+<div class="carousel-item">
+<section class="hero slide-two">
+<div class="container">
+<div class="hero-content"><span class="eyebrow">Everyday moments, made special</span>
+<h1>Fresh from the oven.<br/>Ready to be shared.</h1>
+<p>Golden pastries, comforting classics and little treats to brighten your day.</p><a class="btn btn-light" href="html/menu.html">Discover pastries →</a>
+</div>
+</div>
+</section>
+</div>
+<div class="carousel-item">
+<section class="hero slide-three">
+<div class="container">
+<div class="hero-content"><span class="eyebrow">For the moments that matter</span>
+<h1>Make every<br/>celebration sweeter.</h1>
+<p>Find a centrepiece cake or a box of favourites for the people you love.</p><a class="btn btn-light" href="html/menu.html?category=Cakes">Explore celebration cakes
+                                    →</a>
+</div>
+</div>
+</section>
+</div>
+</div><button aria-label="Previous slide" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#homeSlider" type="button"><span class="carousel-control-prev-icon"></span></button><button aria-label="Next slide" class="carousel-control-next" data-bs-slide="next" data-bs-target="#homeSlider" type="button"><span class="carousel-control-next-icon"></span></button>
+</div>
+
+
+<section class="cat-bar-wrap" aria-label="Browse by category">
+            <div class="cat-strip"><div class="container cat-strip-inner"><div class="browse-categories-label"><span>Browse Categories</span></div>
+                <button class="cat-nav cat-prev" id="catPrev" type="button" aria-label="Scroll categories left" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+                <nav class="cat-bar" id="catBar" aria-label="Product categories"><a class="cat-item active" href="html/menu.html" aria-current="true"><span class="cat-photo cat-photo-collage" aria-hidden="true"><img src="images/menu-chocolate-truffle-cake.jpg" alt="" loading="lazy"><img src="images/menu-butter-croissant.jpg" alt="" loading="lazy"><img src="images/menu-classic-cookies.jpg" alt="" loading="lazy"><img src="images/menu-cherry-lattice-pie.jpg" alt="" loading="lazy"></span><span>All Categories</span></a><a class="cat-item" href="html/menu.html?category=Cakes"><span class="cat-photo-frame"><img src="images/menu-chocolate-truffle-cake.jpg" alt="" loading="lazy"></span><span>Cakes</span></a><a class="cat-item" href="html/menu.html?category=Pastries"><span class="cat-photo-frame"><img src="images/menu-butter-croissant.jpg" alt="" loading="lazy"></span><span>Pastries</span></a><a class="cat-item" href="html/menu.html?category=Cookies"><span class="cat-photo-frame"><img src="images/menu-classic-cookies.jpg" alt="" loading="lazy"></span><span>Cookies</span></a><a class="cat-item" href="html/menu.html?category=Pies"><span class="cat-photo-frame"><img src="images/menu-cherry-lattice-pie.jpg" alt="" loading="lazy"></span><span>Pies</span></a><a class="cat-item" href="html/menu.html?category=Merchandise"><span class="cat-photo-frame"><img src="images/menu-bakerz-signature-mug.jpg" alt="" loading="lazy"></span><span>Merchandise</span></a></nav>
+                <button class="cat-nav cat-next" id="catNext" type="button" aria-label="Scroll categories right" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+            </div></div>
+            <div class="cat-search-row">
+                <form class="cat-search" id="catSearch" role="search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                    <input id="catSearchInput" type="search" placeholder="Search cakes, pastries…" aria-label="Search the menu" autocomplete="off">
+                    <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                </form>
+            </div>
+        </section>
+<section class="section section-soft">
+<div class="container">
+<div class="section-head">
+<div><span class="kicker">Baker's favourites</span>
+<h2>Made for your moments</h2>
+<p>Customer-loved treats, baked with care and finished with a little extra love.</p>
+</div><a class="btn btn-outline" href="html/menu.html">View all bakes →</a>
+</div>
+<div class="product-grid" id="productGrid"></div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="split"><img alt="Baker preparing fresh bread" src="images/home-bakery-philosophy.jpg"/>
+<div><span class="kicker">Our little bakery philosophy</span>
+<h2>Simple ingredients.<br/>Special memories.</h2>
+<p>We believe the best treats don't need to shout. They need good ingredients, careful hands and
+                            the kind of flavour that brings everyone back for another bite.</p>
+<div class="feature-list feature-trio">
+<div class="feature"><strong>Fresh daily</strong><span class="muted">Small batches, every
+                                    morning.</span></div>
+<div class="feature"><strong>Made with care</strong><span class="muted">Thoughtful recipes
+                                    and details.</span></div>
+<div class="feature"><strong>For sharing</strong><span class="muted">Little joys for life's
+                                    big moments.</span></div>
+</div>
+<p><a class="btn btn-primary" href="html/about.html">Get to know us</a></p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-soft">
+<div class="container">
+<div class="offer-banner">
+<div><span class="eyebrow">A sweeter kind of welcome</span>
+<h2>Make room for something lovely.</h2>
+<p style="margin-bottom:0;color:#ead7cc">Enjoy 10% off your first order over Rs. 2,000. Use this code at checkout.</p>
+</div><button aria-label="Copy code FIRSTBITE" class="code-ticket" data-copy="FIRSTBITE" type="button"><span>FIRSTBITE</span><small>Tap to copy</small></button><a class="btn btn-light" href="html/menu.html">Order a treat →</a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div><span class="kicker">A note from our customers</span>
+<h2>Sweet words, shared</h2>
+</div>
+</div>
+<div class="feature-list reviews-home">
+<div class="review-card">
+<div class="rating-stars">★★★★★</div>
+<p>“The cake was fresh, beautifully packed, and the chocolate flavour was just right.”</p>
+<strong>— A happy customer</strong>
+</div>
+<div class="review-card">
+<div class="rating-stars">★★★★★</div>
+<p>“The croissants were flaky and buttery. Perfect with morning tea.”</p><strong>— A pastry
+                            lover</strong>
+</div>
+<div class="review-card">
+<div class="rating-stars">★★★★★</div>
+<p>“Loved the warm service and the thoughtful little details.”</p><strong>— A regular
+                            visitor</strong>
+</div>
+</div>
+<p><a class="btn btn-outline" href="html/feedback.html">Leave your feedback</a></p>
+</div>
+</section>
+</main>
+<div class="ticker"><span id="tickerText">Bakerz Bite • Freshly baked, thoughtfully made • Loading date, time and
+            location…</span></div>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><a class="brand" href="index.html"><img alt="Bakerz Bite signature bakery emblem" class="brand-logo-img" src="images/logo-bakerz-bite.png?v=4"/><span class="brand-name">Bakerz <span class="brand-bite">Bite</span><small>Bakery &amp;
+                                patisserie</small></span></a>
+<p>Small-batch bakes, timeless flavours, and a little sweetness in every day.</p>
+<p>Freshness you can feel. Quality you can taste.</p>
+</div>
+<div>
+<h3>Explore</h3><a href="html/menu.html">Our Menu</a><a href="html/gallery.html">Gallery</a><a href="html/offers.html">Offers</a><a href="html/about.html">Our Story</a>
+</div>
+<div>
+<h3>Customer care</h3><a href="html/contact.html">Contact us</a><a href="html/location.html">Find our
+                        bakery</a><a href="html/faq.html">FAQs</a><a href="html/feedback.html">Feedback</a><a href="html/sitemap.html">Sitemap</a>
+</div>
+<div>
+<h3>Visit or call</h3>
+<p>North Nazimabad, Karachi, Pakistan</p>
+<p>+92 300 1234567<br/>hello@bakerzbite.example</p>
+<p>Mon–Sun · 9:00 AM–10:00 PM</p>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Bakerz Bite. Made with care.</span><span>Demo project · HTML, CSS,
+                    JavaScript, JSON, jQuery &amp; Bootstrap concepts</span></div>
+</div>
+</footer>
+<a aria-label="Open shopping cart" class="mobile-cart-tab" data-cart-open="" href="#cartDrawer" title="Shopping cart"><svg aria-hidden="true" class="mobile-cart-svg" focusable="false" viewBox="0 0 24 24"><path d="M2.5 3.5h2.7l2.3 11.1a1.6 1.6 0 0 0 1.6 1.3h8.1a1.6 1.6 0 0 0 1.6-1.2L20 8H6.2"/><circle cx="9.6" cy="19.8" r="1.3"/><circle cx="17" cy="19.8" r="1.3"/></svg><span class="cart-count" data-cart-count="">0</span></a>
+<div class="cart-backdrop" data-cart-close=""></div>
+<aside aria-hidden="true" aria-label="Shopping cart" class="cart-drawer" id="cartDrawer">
+<div class="cart-drawer-head">
+<div><span class="kicker">Fresh picks</span>
+<h2>Your Cart <span class="cart-count" data-cart-count="">0</span></h2>
+</div><button aria-label="Close cart" class="drawer-close" data-cart-close="" type="button">×</button>
+</div>
+<div class="cart-drawer-items" id="drawerCartItems">
+<div class="empty-state">
+<h3>Your cart is empty</h3>
+<p>Add something freshly baked to get started.</p>
+</div>
+</div>
+<div class="cart-drawer-foot">
+<div class="summary-line drawer-subtotal"><span>Subtotal</span><strong id="drawerCartSubtotal">Rs. 0</strong></div>
+<div class="summary-line delivery-line"><span>Delivery charges</span><strong id="drawerDelivery">Rs. 150</strong></div>
+<div class="summary-line summary-total"><span>Total amount</span><strong id="drawerCartTotal">Rs. 150</strong></div><button class="btn btn-primary" disabled="" id="drawerCheckoutBtn" type="button">Continue to checkout</button><a class="drawer-continue" href="html/menu.html">Continue shopping</a>
+</div>
+</aside>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<button aria-label="Back to top" class="back-to-top" id="backToTop" title="Back to top" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 15l6-6 6 6"></path></svg></button>
+<script>  
+     (function () {  
+         var b = document.getElementById('backToTop');  
+         if (!b) return;  
+         var toggle = function () { b.classList.toggle('show', window.scrollY > 250); };  
+         window.addEventListener('scroll', toggle, { passive: true }); toggle();  
+         b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });  
+    })();  
+      
+
+
+ </script>
+</body>
+</html>
